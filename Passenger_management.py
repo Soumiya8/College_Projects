@@ -22,7 +22,8 @@ def cancel_ticket():
         confirmed_passengers.remove(name)
         print(f"{name} removed from confirmed list")
     elif name in waiting_list:
-        waiting_list.append(name)
+        confirmed_passengers.append(waiting_list[0])
+        waiting_list.remove(waiting_list[0])
         print("the modified waiting list is",waiting_list)
     else:
         print("The name is not found")

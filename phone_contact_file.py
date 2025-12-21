@@ -7,7 +7,7 @@ def add_contact():
 
 def view_contacts():
     try:
-        with open("contact.txt",r):
+        with open("contact.txt","r") as f:
             print(f.read())
     except:
         print("File not Found")
@@ -41,4 +41,3 @@ while True:
         break
     else:
         print("Invalid choice. Please try again.") 
-        
